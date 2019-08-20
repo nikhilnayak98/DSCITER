@@ -1,7 +1,7 @@
 /*
 *   MIT License
 *
-*   Copyright (c) 2019 DSC Institute Of Technical Education & Research (ITER)
+*   Copyright (c) 2019 Nikhil Nayak
 *
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
 *   of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +22,7 @@
 *   SOFTWARE.
 */
 
+// firebase config vars
 var config = {
     apiKey: "",
     authDomain: "",
@@ -31,6 +32,10 @@ var config = {
     messagingSenderId: ""
 };
 
+_NBSettings = {
+    rejectedMessage: "Invalid Email!",
+    apiKey: '<NEVERBOUNCE-API>'
+};
 
 var isValid;
 var field = document.querySelector('#email');
@@ -45,31 +50,12 @@ field.addEventListener('nb:result', function(e) {
     }
 });
 
+firebase.initializeApp(config);
 
 function submitForm(e) {
     e.preventDefault();
     let email = getInputVal("email");
-    if(isValid) {
-        messagesRef.orderByChild("email").equalTo(email).once("value", snapshot => {
-            let userData = snapshot.val();
-            if (userData) {
-                console.log("Email already exists.");
-                document.getElementById("erroralert").style.display = "block";
-                setTimeout(function() {
-                    document.getElementById("erroralert").style.display = "none";
-                }, 5000);
-                document.getElementById("mailform").reset();
-            } else {
-                saveMessage(email);
-                console.log("Done!");
-                document.getElementById("successalert").style.display = "block";
-                setTimeout(function() {
-                    document.getElementById("successalert").style.display = "none";
-                }, 5000);
-                document.getElementById("mailform").reset();
-            }
-        });
-    }
+    // handle email for mailinglist
 }
 
 function getInputVal(id) {

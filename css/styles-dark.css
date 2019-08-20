@@ -1,31 +1,8 @@
-/*
-*   MIT License
-*
-*   Copyright (c) 2019 Nikhil Nayak
-*
-*   Permission is hereby granted, free of charge, to any person obtaining a copy
-*   of this software and associated documentation files (the "Software"), to deal
-*   in the Software without restriction, including without limitation the rights
-*   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-*   copies of the Software, and to permit persons to whom the Software is
-*   furnished to do so, subject to the following conditions:
-*
-*   The above copyright notice and this permission notice shall be included in all
-*   copies or substantial portions of the Software.
-*
-*   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-*   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-*   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-*   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-*   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-*   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-*   SOFTWARE.
-*/
-
 html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-color: #0A192F;
 }
 
 :root {
@@ -35,7 +12,7 @@ html, body {
 body {
   font-family: "Google Sans", sans-serif;
   font-size: 1rem;
-  color: #637282;
+  color: #D7D7D7;
   overflow-x: hidden;
   font-weight: normal;
   letter-spacing: -.3px;
@@ -52,6 +29,10 @@ first-letter {
 second-letter {
   color: #FBBC12;
   font-weight: 400;
+}
+.mail:hover{
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 third-letter {
@@ -81,7 +62,7 @@ button:focus, .btn:focus {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #1B2733;
+  color: #D7D7D7;
   font-family: "Google Sans", sans-serif;
   font-weight: 700;
 }
@@ -137,9 +118,8 @@ p {
 }
 
 .section-spacer {
-  padding: 100px 0;
+  padding: 70px 0;
 }
-
 .cta__large {
   max-width: 450px;
 }
@@ -159,7 +139,7 @@ p {
 
 .section-subtitle {
   font-size: 15px;
-  color: #637282;
+  color: #D7D7D7;
 }
 
 .assistive-text {
@@ -502,83 +482,22 @@ p {
   border-top-color: #2F5BE7  ;
   opacity: 1;
 }
-.event-card, .project-card{
-  -webkit-box-shadow: 0 0 15px rgba(99, 114, 130, 0.3);
-  box-shadow: 0 0 15px rgba(99, 114, 130, 0.3);
+.event-card {
+  -webkit-box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   border-radius: 5px;
   margin: 0 auto 20px;
 }
-.course-card{
-  width: 21rem;
+.course-card, .project-card{
+  width: 22rem;
   margin: 0 auto 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/*project card syling*/
-@media (min-width: 240px) and (max-width: 770px){
-  .project-card {
-    margin-bottom: 50px;
-    width: 21rem;
-
-  }
-}
-
-.project-card .cardheader .img-top {
-    position: relative;
-    top: -20px;
-    float: left;
-    margin-bottom: -80px;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translate(20%);
-
-}
-
-.project-card .cardheader img {
-    width: 100px;
-    height: 100px;
-    -webkit-border-radius: 25%;
-    -moz-border-radius: 25%;
-    border-radius: 25%;
-    border: 2px solid rgba(255,255,255,0.5);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.project-card .cardheader h5{
-  float: right;
-  padding: 30px;
-}
-
-.project-tag{
-  display: flex;
-  justify-content: space-around;
-}
-
-.stack1{
-  background-color: #155724;
-  color: #d4edda;
-  border-color: #fff;
-}
-
-.stack2{
-  background-color: #004085;
-  color: #fff;
-  border-color: #b8daff;
-}
-
-.stack3{
-  background-color: #383d41;
-  color: #fff;
-  border-color: #d6d8db;
-}
-
-.project-card .btn{
-border-radius: 25px;
-}
-/*end project card styling*/
-
 .card{
   float: none;
   border-radius: 8px;
+  background-color: #0A192F;
 }
 .event-card{
 
@@ -606,10 +525,12 @@ border-radius: 25px;
   color: #FD7D44;
 }
 
+.project-card .btn{
 
+}
 .feature-card {
-  -webkit-box-shadow: 0 0 15px rgba(99, 114, 130, 0.3);
-  box-shadow: 0 0 15px rgba(99, 114, 130, 0.3);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 110, 255, 0.4);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 30px;
   padding: 25px 30px;
   border-radius: 5px;
@@ -733,17 +654,17 @@ border-radius: 25px;
 .custom-menu .nav-item .nav-link {
   padding: 20px 15px;
   text-transform: capitalize;
-  color: #637282;
+  color: #D7D7D7;
 }
 
 .custom-menu .nav-item .nav-link:hover {
-  color: #1B2733;
+  color: #ffffff;
 }
 .nav-item{
   font-weight: bold;
 }
 .custom-menu__light {
-  background: #fff;
+  background: #0A192F;
 }
 .event-button{
   background: #2F5BE7;
@@ -757,6 +678,9 @@ border-radius: 25px;
   color: #1B2733;
 }
 
+.nav-link{
+  background-color: #0A192F;
+}
 .custom-menu__light .navbar-toggler {
   border-color: transparent;
 }
@@ -852,9 +776,9 @@ border-radius: 25px;
 }
 
 .custom-menu__light.navbar-is-sticky {
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  -webkit-box-shadow: 0px 1px 15px #999;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  background: #0A192F;
 }
 
 .navbar .container-fluid {
@@ -862,13 +786,11 @@ border-radius: 25px;
   padding-right: 0;
 }
 
-
-@media (min-width: 240px) and (max-width: 400px){
+@media (min-width: 240px) and (max-width: 480px){
   .ml-pic{
     order:-1;
   }
 }
-
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1071,7 +993,7 @@ border-radius: 25px;
 
 .workshops-type-switch .nav-link.active {
   background: transparent;
-  color: #1B2733;
+  color: #D7D7D7;
   border-bottom-color: #3BC1FD;
 }
 
@@ -1170,7 +1092,7 @@ hr{
 
 /*carousel styling*/
 .carousel-control-next-i:hover, .carousel-control-prev-i:hover{
-  background-color: #fff;
+  background: #0A192F;
   color: #3BC1FD;
   -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
@@ -1293,7 +1215,7 @@ hr{
 
 }
 .card.hovercard .cardheader {
-  background: #2F5BE7;
+  background:#2F5BE7;
   background-size: cover;
   height: 130px;
   border: 0;
@@ -1329,10 +1251,10 @@ hr{
   margin-bottom: 2px;
   font-size: 18px;
   line-height: 1;
-  color: #262626;
+  color: #D7D7D7;
 }
 .card.hovercard .info .title p {
-  color: #262626;
+  color: #D7D7D7;
 }
 
 .card.hovercard .info .title p {
@@ -1342,7 +1264,7 @@ hr{
   overflow: hidden;
   font-size: 12px;
   line-height: 20px;
-  color: #737373;
+  color: #D7D7D7;
   text-overflow: ellipsis;
 }
 .card.hovercard .bottom{
@@ -1381,7 +1303,7 @@ hr{
 }
 
 .footer-widget a {
-  color: #637282;
+  color: #D7D7D7;
 }
 
 .footer-widget ul {
@@ -1398,12 +1320,12 @@ hr{
 }
 
 .footer-widget ul li a {
-  color: #637282;
+  color: #D7D7D7;
 }
 
 .footer-widget ul li a:hover {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .footer-widget__title {
@@ -1998,7 +1920,7 @@ hr{
 }
 
 .logo-sm {
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .x-hidden {
@@ -2040,12 +1962,12 @@ hr{
   width: 40px;
   height: 40px;
   color: #fff;
-  background-color: #2F5BE7;
+  background-color: #0A192F;
   display: none;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   border-radius: 60px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #scroll i {
@@ -2165,5 +2087,12 @@ hr{
 .content-title{
   font-size: 27px;
 }
-
-
+.african{
+    background: url(africa.svg) no-repeat;
+    padding: 20px 0;
+    background-size: 100%
+}
+.african2{
+    background: url(africa2.svg) no-repeat;
+    padding: 20px 0;
+}
